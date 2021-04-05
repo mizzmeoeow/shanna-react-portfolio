@@ -1,4 +1,5 @@
 import React from "react";
+import ReactTypingEffect from "react-typing-effect";
 import profilePicture from "../../../static/assets/about/images/me.jpg";
 
 export default function () {
@@ -15,10 +16,19 @@ export default function () {
       <div className="right-column">
         <div className="right-about-me">
           <div className="heading">
-            <h2>Hello, nice to meet you, I am Shanna.</h2>
-            <h3>
-              A Full Stack <u>Developer</u>
-            </h3>
+            <h1 className="typing-effect">
+              <ReactTypingEffect
+                className="typingeffect"
+                text={[
+                  "Hello, welcome to my portfolio",
+                  "I am Shanna :)",
+                  "I am a webpage developer",
+                  "Watch me break the internet",
+                ]}
+                speed={150}
+                eraseDelay={700}
+              />
+            </h1>
           </div>
           <div className="about-me">
             I started my journey into coding at a later age, after many years of
