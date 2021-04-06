@@ -22,7 +22,6 @@ export default class App extends Component {
 
     this.state = {
       loggedInStatus: "NOT_LOGGED_IN",
-      matches: window.matchMedia("(min-width: 768px)").matches,
     };
 
     this.handleSuccessfulLogin = this.handleSuccessfulLogin.bind(this);
@@ -76,8 +75,6 @@ export default class App extends Component {
 
   componentDidMount() {
     this.checkLoginStatus();
-    const handler = (e) => this.setState({ matches: e.matches });
-    window.matchMedia("(min-width: 768px)").addListener(handler);
   }
 
   authorizedPages() {
@@ -135,8 +132,6 @@ export default class App extends Component {
               {this.state.loggedInStatus === "LOGGED_IN"
                 ? this.authorizedPages()
                 : null}
-              {this.state.matches && <h1>Big Screen</h1>}
-              {!this.state.matches && <h3>Small Screen</h3>}
               <Route
                 exact
                 path="/portfolio/:slug"
