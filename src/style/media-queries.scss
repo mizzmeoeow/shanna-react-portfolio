@@ -1,0 +1,26 @@
+@media (max-width: 615px) {
+  .nav-wrapper {
+    .left-side {
+      flex-direction: column;
+    }
+  }
+
+  .portfolio-items-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    width: 60vw;
+    margin: 0px;
+  }
+}
+
+@media (max-width: 615px) {
+  .content-page-wrapper .right-column {
+    padding: 0px;
+  }
+
+  .blog-container .content-container {
+    width: 450px;
+  }
+}
